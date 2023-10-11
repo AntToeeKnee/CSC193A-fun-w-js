@@ -18,3 +18,11 @@ document.getElementById("b3").onchange = () => {
     document.getElementById("user-input").style.textDecoration = "none";
     alert('Font Changed')
 }
+
+const mooButton = document.querySelector('#b5');
+mooButton.addEventListener('click', () => {
+    let sentenceText = document.getElementById("user-input").value;
+    let sentenceSplit = sentenceText.split(".");
+    sentenceText = sentenceSplit.join("-Moo");
+    document.getElementById("user-input").value = sentenceText;
+});
